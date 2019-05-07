@@ -19,7 +19,7 @@ extension Int {
         return self.kilobyte * 1000
     }
     
-    var gigabyte : Int {
-        return self.megabyte * 1000
-    }
+//    var gigabyte : Int {
+//        return self.megabyte * 1000
+//    }
 }

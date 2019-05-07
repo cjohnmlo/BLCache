@@ -13,7 +13,7 @@ class BLCache<E: KeyInitialisable> {
     private var serialQueue = DispatchQueue(label: "com.bl.blockqueue", qos: DispatchQoS.userInitiated)
     
     init(limit inBytes: UInt) {
-        self.cacheStorage = BLCacheStorage<String, E.ObjectType>()
+        self.cacheStorage = BLCacheStorage<String, E.ObjectType>(limit: inBytes)
     }
     
     func entity(forKey key: String, completion : @escaping cacheGetBlock)  {

@@ -19,6 +19,7 @@
 		75DFC9F922819EA900E56FA9 /* KeyInitialisable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFC9F822819EA900E56FA9 /* KeyInitialisable.swift */; };
 		75DFC9FB2281A67800E56FA9 /* BLCacheStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFC9FA2281A67800E56FA9 /* BLCacheStorage.swift */; };
 		75DFC9FE2281A6D300E56FA9 /* Int+Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFC9FD2281A6D300E56FA9 /* Int+Bytes.swift */; };
+		75DFCA002281C7E500E56FA9 /* BLCacheTestLimited.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFC9FF2281C7E500E56FA9 /* BLCacheTestLimited.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		75DFC9F822819EA900E56FA9 /* KeyInitialisable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyInitialisable.swift; sourceTree = "<group>"; };
 		75DFC9FA2281A67800E56FA9 /* BLCacheStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLCacheStorage.swift; sourceTree = "<group>"; };
 		75DFC9FD2281A6D300E56FA9 /* Int+Bytes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Bytes.swift"; sourceTree = "<group>"; };
+		75DFC9FF2281C7E500E56FA9 /* BLCacheTestLimited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLCacheTestLimited.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				75DFC9D222819DEF00E56FA9 /* BLCacheTests.swift */,
+				75DFC9FF2281C7E500E56FA9 /* BLCacheTestLimited.swift */,
 				75DFC9D422819DEF00E56FA9 /* Info.plist */,
 			);
 			path = BLCacheTests;
@@ -309,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75DFC9D322819DEF00E56FA9 /* BLCacheTests.swift in Sources */,
+				75DFCA002281C7E500E56FA9 /* BLCacheTestLimited.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
