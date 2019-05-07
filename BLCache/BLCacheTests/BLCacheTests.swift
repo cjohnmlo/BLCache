@@ -61,6 +61,28 @@ class BLCacheTests: XCTestCase {
             }
         }
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            for _ in 1...5 {
+                self.cache?.entity(forKey: "A", completion: { (result) in
+                    if let res = result {
+                        self.writeToResult(e: res)
+                    }
+                })
+                
+                self.cache?.entity(forKey: "B", completion: { (result) in
+                    if let res = result {
+                        self.writeToResult(e: res)
+                    }
+                })
+                
+                self.cache?.entity(forKey: "C", completion: { (result) in
+                    if let res = result {
+                        self.writeToResult(e: res)
+                    }
+                })
+            }
+        }
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 8.0) {
             assert(self.resultSet?.count == 3)
             exp.fulfill()
@@ -110,6 +132,28 @@ class BLCacheTests: XCTestCase {
                         self.writeToResult(e: res)
                     }
                 })
+                self.cache?.entity(forKey: "C", completion: { (result) in
+                    if let res = result {
+                        self.writeToResult(e: res)
+                    }
+                })
+            }
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            for _ in 1...5 {
+                self.cache?.entity(forKey: "A", completion: { (result) in
+                    if let res = result {
+                        self.writeToResult(e: res)
+                    }
+                })
+                
+                self.cache?.entity(forKey: "B", completion: { (result) in
+                    if let res = result {
+                        self.writeToResult(e: res)
+                    }
+                })
+                
                 self.cache?.entity(forKey: "C", completion: { (result) in
                     if let res = result {
                         self.writeToResult(e: res)
