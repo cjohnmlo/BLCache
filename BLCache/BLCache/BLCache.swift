@@ -6,17 +6,17 @@
 //  Copyright © 2019 cjohnmlo. All rights reserved.
 //
 
-class BLCache<E: KeyInitialisable> {
+public class BLCache<E: KeyInitialisable> {
     
     private var blockCache = Dictionary<String, [cacheGetBlock]>()
     private var cacheStorage : BLCacheStorage<String, E.ObjectType>
     private var serialQueue = DispatchQueue(label: "com.bl.blockqueue", qos: DispatchQoS.userInitiated)
     
-    init(limit inBytes: UInt) {
+    public init(limit inBytes: UInt) {
         self.cacheStorage = BLCacheStorage<String, E.ObjectType>(limit: inBytes)
     }
     
-    func entity(forKey key: String, completion : @escaping cacheGetBlock)  {
+    public func entity(forKey key: String, completion : @escaping cacheGetBlock)  {
         if let res = self.cacheStorage.getValue(forKey: key) {
             DispatchQueue.main.async {
                 completion(res)
@@ -64,7 +64,7 @@ class BLCache<E: KeyInitialisable> {
         }
     }
     
-    typealias cacheGetBlock = (E.ObjectType?) -> ()
+    public typealias cacheGetBlock = (E.ObjectType?) -> ()
 }
 
 

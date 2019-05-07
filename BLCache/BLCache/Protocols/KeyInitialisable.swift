@@ -6,7 +6,7 @@
 //  Copyright © 2019 cjohnmlo. All rights reserved.
 //
 
-protocol KeyInitialisable {
+public protocol KeyInitialisable {
     associatedtype ObjectType: KeyInitialisable = Self
     static func instanceFrom(key keyString: String, completion: @escaping (ObjectType?) -> Void)
     func sizeInBytes() -> UInt

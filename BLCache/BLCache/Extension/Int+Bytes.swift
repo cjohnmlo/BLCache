@@ -6,7 +6,7 @@
 //  Copyright © 2019 cjohnmlo. All rights reserved.
 //
 
-extension Int {
+public extension Int {
     var byte : Int {
         return self
     }
